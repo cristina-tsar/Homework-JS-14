@@ -32,7 +32,7 @@ if ((a > 3 && a < 12) && ( b >= 5 && b < 13)) {
  let userInterest = '';
  if (userMonth < 6) {
      userInterest = 15;
- } else if ( userMonth > 6 && userMonth < 9) {
+ } else if ( userMonth >= 6 && userMonth < 9) {
      userInterest = 16;
  } else if ( userMonth >= 9) {
      userInterest = 17;
