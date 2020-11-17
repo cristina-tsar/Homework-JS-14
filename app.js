@@ -44,24 +44,25 @@ if ((a > 3 && a < 12) && ( b >= 5 && b < 13)) {
  +'% річних, на термін '+ userMonth 
  +' місяців. За цей період часу, Ви, заробите '
  + userPercentage +' грн.');*/
+
 //Задача 1
 
-let sale = 20;
+let ride = 20;
 let price = +prompt('Яка ціна товару в грн.?','');
 
-function calcSum() {
-   return price - price*(sale/100)
+function calcSum(ride,price) {
+   return price - price*(ride/100)
 }
 
-console.log (calcSum() + ' грн.')
+console.log (calcSum(ride,price) + ' грн.');
 
 //Задача 2
 
-function max(a,b) {
-    if (a > b) {
-        return a;
+function max(x,y) {
+    if (x > y) {
+        return x;
     } else {
-        return b;
+        return y;
     }
 }
 console.log (max( 2,10));
@@ -71,20 +72,20 @@ console.log (max( 22,21));
 
 //Задача 3
 
-let a = +prompt ('Введіть ціну товару!','');
-let b = +prompt ('Введіть кількість товарів!','');
+let cost = +prompt ('Введіть ціну товару!','');
+let number = +prompt ('Введіть кількість товарів!','');
 
-function calcSum (a,b) {
+function calcNum (cost,number) {
 
-    console.log (a * b)
+    console.log (cost * number)
 }
-calcSum(a,b)
+calcNum(cost,number);
 
 //Задача 4
 
 let a = +prompt('Введіть загальну суму покупок!','');
 let sale;
-function calcSum(a,sale) {
+function checkPermission(a,sale) {
     
         if ( a < 1000) {
         console.log ( a = a - a * 0.03);
@@ -102,8 +103,8 @@ function calcSum(a,sale) {
     + ' Сума оплати становить - ' +  a );
 }
 
-calcSum(a, sale);
-    
+checkPermission(a, sale);
+
 
 
 
