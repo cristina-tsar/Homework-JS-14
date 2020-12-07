@@ -1,56 +1,51 @@
 //Завдання 1
-
-let num1 = +prompt("","");
-let num2 = +prompt ("","");
-
-function foo(num1,num2,answer) {
-    if (confirm(answer)) {
-        if (num1 > num2){
-        return num1;
-    } else if ( num1 < num2) {
-        return num2;
-    }
-    } else {
-        if (num1 < num2){
-            return num1;
-        } else {
-            return num2;
-        }
-    }  
+let numbers = [2, 3, 5, 12, 45];
+console.log(numbers)
+function numSum(num){
+   let sum = 0; 
+   for(let i =0; i < num.length; i++) {
+       sum += num[i]
+   }
+   console.log(sum);
 }
-console.log(foo(num1, num2,"Are you confirm?"));
+numSum(numbers)
 
 
-//Задання 2.1
-let askYear = +prompt('When were you born?','');
-let yearNow = 2020;
-function calcAge(yearOld) {
-    yearOld = yearNow - askYear;
-    return yearOld;
+//Завдання 2
+
+let userNumbers = prompt('Введіть делька чисел через кому.','');
+let num = userNumbers.split(",");
+console.log(num)
+num.sort(function(min, max){
+    return max - min;
+});
+console.log(num);
+
+
+//Завдання 3
+let userNum = prompt('Введіть делька чисел через кому.','');
+let numUser = userNum.split(",");
+console.log(numUser);
+let searchNum = prompt('Яке число бажаєте знайти?','');
+console.log(searchNum);
+let numx = searchNum;
+function findNumber(numUser,numx) {
+    if (numUser.indexOf(numx) != -1) {
+   console.log('true')
 }
-console.log(calcAge());
-
-//2.2
-let userName = prompt('Як, Вас, звати?','');
-let year = calcAge();
-
-function yearUntilRetirement(year,userName) {
-    
-    if (year < 60) {
-        console.log (`${userName} вийде на пенсію через ${60 - year} років`)
-    } else {
-        console.log (`${userName} вже пенсіонер.`) 
-    }
 }
+findNumber(numUser,numx)
 
-yearUntilRetirement(year,userName);
-  
+//Завдання 4
+let arr = [2, 5, 6]
+console.log(arr)
+let max = arr.reduce(function(a, b){
+    return Math.max(a, b);
+})
+let min = arr.reduce(function(a, b){
+    return Math.min(a, b);
+})
 
-          
-
-
-
-
-
+console.log(max, min)
 
 
